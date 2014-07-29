@@ -2,14 +2,14 @@
 
 	<!-- These are the possible storage -->
 	<!-- Supported types: local, mount -->
-	<handler name='backup' 	type='local' 	location='/backup/' 			/>
-	<handler name='kira' 	type='mount' 	location='/media/KIRA/' 		/>
-	<handler name='hdrive' 	type='mount' 	location='/media/martin1/'		/>
+	<handlers>
+		<h name='backup' type='local' password='mypasw' location='/backup/' 			/>
+		<h name='hdrive' type='mount' password='mypasw' location='/media/martin1/backup/'	/>
+	</handlers>
 
 	<!-- This files should be saved as tar -->
 	<source>
-		<compress>true</compress>	
-		<handler>kira</handler>
+		<!-- Handlers --> 
 		<handler>backup</handler>
 		<handler>hdrive</handler>
 		<!-- ROOT --> 
@@ -21,7 +21,6 @@
 		<dir>/home/martin/.bashrc</dir>
 		<dir>/home/django/.bashrc</dir>
 		<dir>/home/market/.bashrc</dir>
-		<dir>/home/market/market</dir>
 		<dir>/home/android/.bashrc</dir>
 		<dir>/home/network/.bashrc</dir>
 		<dir>/home/martin/.ssh/config</dir>
@@ -46,7 +45,7 @@
 		<dir>/etc/httpd/conf/ssl.key</dir>
 		<dir>/etc/ssl</dir>
 		<!-- OPT --> 
-		<dir>/opt/PerlBackup</dir>
+		<dir>/opt/SystemBackup</dir>
 		<dir>/opt/libs</dir>
 		<dir>/opt/phi</dir>
 		<dir>/opt/android</dir>
@@ -55,20 +54,13 @@
 		<dir>/usr/lib64/python2.6/site-packages/wst/linux/screensaver.py</dir>
 	</source>
 
-	<!-- These files should not be compressed --> 
-	<source>
-		<compress>false</compress>	
-		<handler>kira</handler>
-		<handler>hdrive</handler>
-		<dir>/home/martin/Desktop/TELEPOD</dir>
-	</source>
-
 	<!-- These files should only be saved to hdisk --> 
 	<source>
-		<compress>false</compress>	
+		<!-- Handlers --> 
 		<handler>hdrive</handler>
 		<dir>/martin/Desktop/HDISK/</dir>
 		<dir>/opt/ejabberd</dir>	
+		<dir>/home/market/market</dir>
 		<dir>/opt/ant</dir>	
 		<dir>/opt/jdk</dir>	
 		<dir>/opt/android-sdk-linux</dir>	
