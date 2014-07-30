@@ -3,15 +3,15 @@
 	<!-- These are the possible storage -->
 	<!-- Supported types: local, mount -->
 	<handlers>
-		<h name='backup' type='local' password='mypasw' location='/backup/' 			/>
-		<h name='hdrive' type='mount' password='mypasw' location='/media/martin1/backup/'	/>
+		<h name='system'   type='local' password='mypasw' location='/backup/system/' 		/>
+		<h name='software' type='local' password='mypasw' location='/backup/software/' 		/>
+		<h name='hdrive'   type='mount' password='mypasw' location='/media/martin1/backup/'	/>
 	</handlers>
 
-	<!-- This files should be saved as tar -->
+	<!-- Perform a system backup --> 
 	<source>
 		<!-- Handlers --> 
-		<handler>backup</handler>
-		<handler>hdrive</handler>
+		<handler>system</handler>
 		<!-- ROOT --> 
 		<dir>/root/.bashrc</dir>
 		<!-- HOME --> 
@@ -44,13 +44,22 @@
 		<dir>/etc/httpd/conf/ssl.key</dir>
 		<dir>/etc/ssl</dir>
 		<!-- OPT --> 
-		<dir>/opt/SystemBackup</dir>
 		<dir>/opt/libs</dir>
-		<dir>/opt/phi</dir>
-		<dir>/opt/android</dir>
 		<dir>/opt/agns/bin/NetVPN.sh</dir>
 		<!-- USER --> 
 		<dir>/usr/lib64/python2.6/site-packages/wst/linux/screensaver.py</dir>
+	</source>
+
+	<!-- Perform software backup --> 
+	<source>
+		<!-- Handlers --> 
+		<handler>software</handler>
+		<!-- Databases --> 
+		<dir>/var/lib/mysql</dir>
+		<!-- Software --> 
+		<dir>/opt/SystemBackup</dir>
+		<dir>/opt/phi</dir>
+		<dir>/opt/android</dir>
 	</source>
 
 	<!-- These files should only be saved to hdisk --> 

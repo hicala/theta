@@ -36,6 +36,7 @@ SOURCES = []
 for s in root.findall('source'):
 	dict = { 'handlers':[], 'files':[], }	
 	for h in s.findall('handler'):
+		print h.text
 		dict['handlers'].append(h.text)
 	for f in s.findall('dir'):
 		dict['files'].append(f.text)
