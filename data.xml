@@ -33,7 +33,6 @@
 		<!-- VAR --> 
 		<dir>/var/spool/cron/root</dir>
 		<dir>/var/lib/mysql</dir>
-		<dir>/var/phi</dir>
 		<!-- ETC --> 
 		<dir>/etc/ssh/ssh_config</dir>
 		<dir>/etc/hosts</dir>
