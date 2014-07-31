@@ -70,6 +70,7 @@
 		<dir>/opt/ejabberd</dir>	
 		<dir>/home/market/market</dir>
 		<dir>/opt/ant</dir>	
+		<dir>/opt/activator</dir>	
 		<dir>/opt/jdk</dir>	
 		<dir>/opt/android-sdk-linux</dir>	
 	</source>
