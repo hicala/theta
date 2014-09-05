@@ -1,14 +1,14 @@
 #!/usr/bin/python
 
 # Custom settings.-
-path = "/opt/SystemBackup"
+path = "/opt/mu"
 name = path + "/data.xml"
 
 # Load packages.-
 import xml.etree.ElementTree as ET
 import os
 import sys
-sys.path.append('/opt/SystemBackup')
+sys.path.append(path)
 from models import * 
 os.system('clear')
 

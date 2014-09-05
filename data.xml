@@ -4,7 +4,6 @@
 	<!-- Supported types: local, mount -->
 	<handlers>
 		<h name='system'   type='local' password='mypasw' location='/backup/system/' 		/>
-		<h name='software' type='local' password='mypasw' location='/backup/software/' 		/>
 		<h name='hdrive'   type='mount' password='mypasw' location='/media/martin1/backup/'	/>
 	</handlers>
 
@@ -20,19 +19,17 @@
 		<dir>/home/martin/.profile</dir>
 		<dir>/home/martin/.bashrc</dir>
 		<dir>/home/django/.bashrc</dir>
-		<dir>/home/market/.bashrc</dir>
 		<dir>/home/android/.bashrc</dir>
 		<dir>/home/network/.bashrc</dir>
 		<dir>/home/martin/.ssh/config</dir>
 		<dir>/home/martin/lotus/notes/data/notes.ini</dir>
-		<dir>/home/martin/lotus/notes/data/names.nsf</dir>
 		<dir>/home/martin/.agnc</dir>
 		<dir>/home/martin/.purple/blist.xml</dir>
 		<dir>/home/martin/.purple/accounts.xml</dir>
-		<dir>/home/martin/.mozilla/firefox/</dir>
 		<!-- VAR --> 
 		<dir>/var/spool/cron/root</dir>
 		<dir>/var/lib/mysql</dir>
+		<dir>/var/lib/mongo</dir>
 		<!-- ETC --> 
 		<dir>/etc/ssh/ssh_config</dir>
 		<dir>/etc/hosts</dir>
@@ -48,18 +45,15 @@
 		<dir>/opt/agns/bin/NetVPN.sh</dir>
 		<!-- USER --> 
 		<dir>/usr/lib64/python2.6/site-packages/wst/linux/screensaver.py</dir>
-	</source>
-
-	<!-- Perform software backup --> 
-	<source>
-		<!-- Handlers --> 
-		<handler>software</handler>
 		<!-- Databases --> 
 		<dir>/var/lib/mysql</dir>
 		<!-- Software --> 
-		<dir>/opt/SystemBackup</dir>
+		<dir>/opt/mu</dir>
 		<dir>/opt/phi</dir>
+		<dir>/opt/gamma</dir>
 		<dir>/opt/android</dir>
+		<dir>/home/martin/.mozilla/firefox/</dir>
+		<dir>/home/martin/lotus/notes/data/names.nsf</dir>
 	</source>
 
 	<!-- These files should only be saved to hdisk --> 
@@ -68,7 +62,6 @@
 		<handler>hdrive</handler>
 		<dir>/martin/Desktop/HDISK/</dir>
 		<dir>/opt/ejabberd</dir>	
-		<dir>/home/market/market</dir>
 		<dir>/opt/ant</dir>	
 		<dir>/opt/activator</dir>	
 		<dir>/opt/jdk</dir>	
