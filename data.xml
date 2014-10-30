@@ -27,9 +27,10 @@
 		<dir>/home/martin/.purple/blist.xml</dir>
 		<dir>/home/martin/.purple/accounts.xml</dir>
 		<!-- VAR --> 
-		<dir>/var/spool/cron/root</dir>
+		<dir>/var/spool/cron</dir>
 		<dir>/var/lib/mysql</dir>
 		<dir>/var/lib/mongo</dir>
+		<dir>/var/www</dir>
 		<!-- ETC --> 
 		<dir>/etc/ssh/ssh_config</dir>
 		<dir>/etc/hosts</dir>
@@ -51,6 +52,7 @@
 		<dir>/opt/mu</dir>
 		<dir>/opt/phi</dir>
 		<dir>/opt/gamma</dir>
+		<dir>/opt/omega</dir>
 		<dir>/opt/android</dir>
 		<dir>/home/martin/.mozilla/firefox/</dir>
 		<dir>/home/martin/lotus/notes/data/names.nsf</dir>
