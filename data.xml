@@ -11,14 +11,13 @@
 		<handler>system</handler>
 		<!-- ROOT --> 
 		<dir>/root/.bashrc</dir>
+		<dir>/root/.android/</dir>
 		<!-- HOME --> 
 		<dir>/home/martin/Desktop/GLSSPD</dir>
 		<dir>/home/martin/Desktop/UNIX</dir>
 		<dir>/home/martin/.profile</dir>
 		<dir>/home/martin/.bashrc</dir>
-		<dir>/home/django/.bashrc</dir>
-		<dir>/home/android/.bashrc</dir>
-		<dir>/home/network/.bashrc</dir>
+		<dir>/home/phi/.bashrc</dir>
 		<dir>/home/martin/.ssh/config</dir>
 		<dir>/home/martin/lotus/notes/data/notes.ini</dir>
 		<dir>/home/martin/.agnc</dir>
@@ -29,13 +28,14 @@
 		<dir>/var/lib/mongo</dir>
 		<dir>/var/www</dir>
 		<dir>/var/lib/mysql</dir>
+		<!--
 		<dir>/var/gamma</dir>
+		-->
 		<!-- ETC --> 
 		<dir>/etc/ssh/ssh_config</dir>
 		<dir>/etc/hosts</dir>
 		<dir>/etc/profile</dir>
 		<dir>/etc/environment</dir>
-		<dir>/etc/gdm/custom.conf</dir>
 		<dir>/etc/httpd/conf.d</dir>
 		<dir>/etc/httpd/conf/ssl.crt</dir>
 		<dir>/etc/httpd/conf/ssl.key</dir>
