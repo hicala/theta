@@ -3,8 +3,10 @@
 	<!-- These are the possible storage devices -->
 	<!-- Supported types: local, mount -->
 	<handlers>
-		<h name='system'   type='local' password='mypasw' location='/backup/system/' 		/>
+		<h name='system'   type='local' password='mypasw' location='/backup/' />
+		<!--
 		<h name='hdrive'   type='mount' password='mypasw' location='/media/martin1/backup/'	/>
+		-->
 	</handlers>
 
 	<source>
@@ -26,45 +28,25 @@
 		<!-- VAR --> 
 		<dir>/var/spool/cron</dir>
 		<dir>/var/lib/mongo</dir>
-		<dir>/var/www</dir>
 		<dir>/var/lib/mysql</dir>
-		<!--
-		<dir>/var/gamma</dir>
-		-->
+		<dir>/var/lib/pgsql</dir>
+		<dir>/var/www</dir>
 		<!-- ETC --> 
 		<dir>/etc/ssh/ssh_config</dir>
 		<dir>/etc/hosts</dir>
 		<dir>/etc/profile</dir>
+		<dir>/etc/php.ini</dir>
 		<dir>/etc/environment</dir>
 		<dir>/etc/httpd/conf.d</dir>
 		<dir>/etc/httpd/conf/ssl.crt</dir>
 		<dir>/etc/httpd/conf/ssl.key</dir>
 		<dir>/etc/ssl</dir>
 		<!-- OPT --> 
-		<dir>/opt/libs</dir>
+		<dir>/opt/lab</dir>
 		<dir>/opt/agns/bin/NetVPN.sh</dir>
 		<!-- USER --> 
 		<dir>/usr/lib64/python2.6/site-packages/wst/linux/screensaver.py</dir>
-		<!-- Software --> 
-		<dir>/opt/mu</dir>
-		<dir>/opt/phi</dir>
-		<dir>/opt/gamma</dir>
-		<dir>/opt/omega</dir>
-		<dir>/opt/android</dir>
 		<dir>/home/martin/.mozilla/firefox/</dir>
 		<dir>/home/martin/lotus/notes/data/names.nsf</dir>
 	</source>
-
-	<!-- These files should only be saved to hdisk --> 
-	<source>
-		<!-- Handlers --> 
-		<handler>hdrive</handler>
-		<dir>/martin/Desktop/HDISK/</dir>
-		<dir>/opt/ejabberd</dir>	
-		<dir>/opt/ant</dir>	
-		<dir>/opt/activator</dir>	
-		<dir>/opt/jdk</dir>	
-		<dir>/opt/android-sdk-linux</dir>	
-	</source>
-
 </xml>

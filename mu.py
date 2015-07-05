@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Custom settings.-
-path = "/opt/mu"
+path = "/opt/lab/mu"
 name = path + "/data.xml"
 
 # Load packages.-

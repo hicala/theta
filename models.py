@@ -103,8 +103,8 @@ class Backup:
 			raise Exception("%s is not " % self.DIR)
 		elif not os.access(self.DIR, os.W_OK):
 			raise Exception("Can not write to %s" % self.DIR)
-		elif self.df()>70:
-			raise Exception("File System %s is above 70" % self.DIR)
+		# elif self.df()>70:
+			# raise Exception("File System %s is above 70" % self.DIR)
 
 	# Set the backup type.-
 	# null setType(t)
