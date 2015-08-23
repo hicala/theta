@@ -22,6 +22,7 @@ for h in root.findall('handlers')[0].findall('h'):
 	try: 
 		name = h.attrib['name']
 		b    = Backup()
+		b.setMax(h.attrib['max'])
 		b.setType(h.attrib['type'].upper())
 		b.setDir(h.attrib['location'])
 		if h.attrib['password']:
@@ -58,6 +59,7 @@ for s in SOURCES:
 			# Compile and run.-
 			backup.compile()
 			backup.run()
+			backup.cleanOld()
 
 			# End.-
 			print backup.NAME

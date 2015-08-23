@@ -1,14 +1,16 @@
 #!/usr/bin/python
 from datetime import * 
-import os
-import sys
 import subprocess
+import commands
+import sys
 import re
+import os
 
 # Example:
 # b = Backup()
 # b.setType("LOCAL")
 # b.setDir('/backup')
+# b.setMax(20)
 # b.compress('my_password')
 # b.add('/tmp/bootstrap') 
 # b.compile()
@@ -34,6 +36,7 @@ class Backup:
 		self.FILES 	= []
 		self.CMD   	= ""
 		self.NAME	= ""
+		self.MAX	= 5
 
 	# Checks File System usage
 	# float self.df()
@@ -93,6 +96,10 @@ class Backup:
 	def uncompress(self):
 		self.PASW = None
 
+	# Set the maximun amount of files kept per directory.-
+	def setMax(self,i):
+		self.MAX = i  
+
 	# Set the zip destination.-
 	# null setDir(d)
 	def setDir(self,d):
@@ -105,6 +112,13 @@ class Backup:
 			raise Exception("Can not write to %s" % self.DIR)
 		# elif self.df()>70:
 			# raise Exception("File System %s is above 70" % self.DIR)
+
+	# Clean old backup files.-
+	def cleanOld(self):
+		a = commands.getstatusoutput("ls -lt %s | awk '{ print $9 }'" % self.DIR)[1]
+		for i,f in enumerate(a.split("\n")):
+			if i > self.MAX:
+				os.system("rm %s" % f)
 
 	# Set the backup type.-
 	# null setType(t)

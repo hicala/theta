@@ -3,9 +3,9 @@
 	<!-- These are the possible storage devices -->
 	<!-- Supported types: local, mount -->
 	<handlers>
-		<h name='system'   type='local' password='mypasw' location='/backup/' />
+		<h name='system'   max='20' type='local' password='mypasw' location='/backup/' />
 		<!--
-		<h name='hdrive'   type='mount' password='mypasw' location='/media/martin1/backup/'	/>
+		<h name='hdrive'   max='01' type='mount' password='mypasw' location='/media/martin1/backup/'	/>
 		-->
 	</handlers>
 
@@ -13,40 +13,23 @@
 		<handler>system</handler>
 		<!-- ROOT --> 
 		<dir>/root/.bashrc</dir>
-		<dir>/root/.android/</dir>
 		<!-- HOME --> 
-		<dir>/home/martin/Desktop/GLSSPD</dir>
-		<dir>/home/martin/Desktop/UNIX</dir>
-		<dir>/home/martin/.profile</dir>
 		<dir>/home/martin/.bashrc</dir>
-		<dir>/home/phi/.bashrc</dir>
-		<dir>/home/martin/.ssh/config</dir>
-		<dir>/home/martin/lotus/notes/data/notes.ini</dir>
-		<dir>/home/martin/.agnc</dir>
-		<dir>/home/martin/.purple/blist.xml</dir>
-		<dir>/home/martin/.purple/accounts.xml</dir>
 		<!-- VAR --> 
 		<dir>/var/spool/cron</dir>
 		<dir>/var/lib/mongo</dir>
 		<dir>/var/lib/mysql</dir>
 		<dir>/var/lib/pgsql</dir>
-		<dir>/var/www</dir>
 		<!-- ETC --> 
 		<dir>/etc/ssh/ssh_config</dir>
-		<dir>/etc/hosts</dir>
-		<dir>/etc/profile</dir>
-		<dir>/etc/php.ini</dir>
-		<dir>/etc/environment</dir>
 		<dir>/etc/httpd/conf.d</dir>
 		<dir>/etc/httpd/conf/ssl.crt</dir>
 		<dir>/etc/httpd/conf/ssl.key</dir>
 		<dir>/etc/ssl</dir>
+		<dir>/etc/yum.repos.d</dir>
+		<dir>/etc/hosts</dir>
+		<dir>/etc/toxsocks.conf</dir>
 		<!-- OPT --> 
 		<dir>/opt/lab</dir>
-		<dir>/opt/agns/bin/NetVPN.sh</dir>
-		<!-- USER --> 
-		<dir>/usr/lib64/python2.6/site-packages/wst/linux/screensaver.py</dir>
-		<dir>/home/martin/.mozilla/firefox/</dir>
-		<dir>/home/martin/lotus/notes/data/names.nsf</dir>
 	</source>
 </xml>
